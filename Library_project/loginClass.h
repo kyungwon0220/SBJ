@@ -16,8 +16,8 @@ public:
 
 private:
 	Ui::loginClassClass ui;
-	selectClass* select;
-	signupClass* signup;
+	selectClass* select = 0; // 0은 초기화시키지 않았다고 경고가 나와서 넣었습니다.
+	signupClass* signup = 0;
 public slots:
 	void change_select_ui();
 	void change_signupClass();

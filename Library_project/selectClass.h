@@ -15,8 +15,8 @@ public:
 
 private:
 	Ui::selectClassClass ui;
-	borrowClass *borrow;
-	requestClass* request;
+	borrowClass *borrow = 0;
+	requestClass* request = 0;
 
 public slots:
 	void change_borrowClass();

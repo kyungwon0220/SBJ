@@ -1,1 +1,3 @@
 C:\Users\KOSTA\source\repos\Library_project\x64\Debug\Library_project.exe
+C:\Users\USER\Downloads\조롱이\Library_project\x64\Debug\Library_project.exe
+C:\Users\KOSTA\Downloads\조롱이\조롱이\Library_project_2\x64\Debug\Library_project.exe
