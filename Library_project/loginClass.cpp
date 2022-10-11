@@ -21,3 +21,7 @@ void loginClass::change_select_ui() {
 		QMessageBox::warning(this, "wrong", "error");
 	}
 }
+void loginClass::change_signupClass() {
+	signup = new signupClass(this);
+	signup->show();
+}

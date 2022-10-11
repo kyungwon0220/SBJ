@@ -92,7 +92,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>sign in</string>
+     <string>sign up</string>
     </property>
    </widget>
   </widget>
@@ -135,8 +135,25 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>loginClassClass</receiver>
+   <slot>change_signupClass()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>252</x>
+     <y>404</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>355</x>
+     <y>528</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>change_select_ui()</slot>
+  <slot>change_signupClass()</slot>
  </slots>
 </ui>

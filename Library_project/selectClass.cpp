@@ -13,3 +13,9 @@ void selectClass::change_borrowClass() {
 	borrow = new borrowClass(this);
 	borrow->show();
 }
+
+void selectClass::change_requestClass() {
+	hide();
+	request = new requestClass(this);
+	request->show();
+}

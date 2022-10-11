@@ -78,6 +78,7 @@ public:
 
         retranslateUi(loginClassClass);
         QObject::connect(pushButton, SIGNAL(clicked()), loginClassClass, SLOT(change_select_ui()));
+        QObject::connect(pushButton_2, SIGNAL(clicked()), loginClassClass, SLOT(change_signupClass()));
 
         QMetaObject::connectSlotsByName(loginClassClass);
     } // setupUi
@@ -88,7 +89,7 @@ public:
         label->setText(QString());
         label_2->setText(QString());
         pushButton->setText(QCoreApplication::translate("loginClassClass", "Login", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("loginClassClass", "sign in", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("loginClassClass", "sign up", nullptr));
     } // retranslateUi
 
 };

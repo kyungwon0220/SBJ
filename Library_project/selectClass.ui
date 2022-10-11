@@ -151,8 +151,25 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>selectClassClass</receiver>
+   <slot>change_requestClass()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>389</x>
+     <y>322</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>361</x>
+     <y>518</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>change_borrowClass()</slot>
+  <slot>change_requestClass()</slot>
  </slots>
 </ui>

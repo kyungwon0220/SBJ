@@ -85,8 +85,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bookinfoClass.cpp" />
+    <ClCompile Include="requestClass.cpp" />
     <ClCompile Include="selectClass.cpp" />
+    <ClCompile Include="signupClass.cpp" />
     <QtRcc Include="Library_project.qrc" />
+    <QtUic Include="bookinfoClass.ui" />
     <QtUic Include="borrowClass.ui" />
     <QtUic Include="Library_project.ui" />
     <QtMoc Include="Library_project.h" />
@@ -95,7 +99,9 @@
     <ClCompile Include="loginClass.cpp" />
     <ClCompile Include="main.cpp" />
     <QtUic Include="loginClass.ui" />
+    <QtUic Include="requestClass.ui" />
     <QtUic Include="selectClass.ui" />
+    <QtUic Include="signupClass.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="borrowClass.h" />
@@ -105,6 +111,15 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="selectClass.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="bookinfoClass.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="requestClass.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="signupClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

@@ -3,6 +3,7 @@
 #include <QMainWindow>
 #include "ui_selectClass.h"
 #include "borrowClass.h"
+#include "requestClass.h"
 
 class selectClass : public QMainWindow
 {
@@ -15,7 +16,9 @@ public:
 private:
 	Ui::selectClassClass ui;
 	borrowClass *borrow;
+	requestClass* request;
 
 public slots:
 	void change_borrowClass();
+	void change_requestClass();
 };
