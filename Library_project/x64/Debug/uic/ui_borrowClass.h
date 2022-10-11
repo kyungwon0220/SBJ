@@ -19,7 +19,7 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTableView>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -34,7 +34,7 @@ public:
     QComboBox *comboBox;
     QLineEdit *lineEdit;
     QPushButton *pushButton;
-    QTableView *tableView;
+    QTableWidget *tableWidget;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -68,9 +68,17 @@ public:
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(370, 210, 75, 31));
-        tableView = new QTableView(centralWidget);
-        tableView->setObjectName("tableView");
-        tableView->setGeometry(QRect(70, 270, 351, 261));
+        tableWidget = new QTableWidget(centralWidget);
+        if (tableWidget->columnCount() < 3)
+            tableWidget->setColumnCount(3);
+        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
+        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem1);
+        QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem2);
+        tableWidget->setObjectName("tableWidget");
+        tableWidget->setGeometry(QRect(90, 290, 311, 241));
         borrowClassClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(borrowClassClass);
         menuBar->setObjectName("menuBar");
@@ -84,6 +92,8 @@ public:
         borrowClassClass->setStatusBar(statusBar);
 
         retranslateUi(borrowClassClass);
+        QObject::connect(tableWidget, SIGNAL(cellDoubleClicked(int,int)), borrowClassClass, SLOT(show_book_info()));
+        QObject::connect(pushButton, SIGNAL(clicked()), borrowClassClass, SLOT(search_book()));
 
         QMetaObject::connectSlotsByName(borrowClassClass);
     } // setupUi
@@ -99,6 +109,12 @@ public:
         comboBox->setItemText(3, QCoreApplication::translate("borrowClassClass", "\354\266\234\355\214\220\354\202\254", nullptr));
 
         pushButton->setText(QCoreApplication::translate("borrowClassClass", "\352\262\200\354\203\211", nullptr));
+        QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
+        ___qtablewidgetitem->setText(QCoreApplication::translate("borrowClassClass", "\354\240\234\353\252\251", nullptr));
+        QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
+        ___qtablewidgetitem1->setText(QCoreApplication::translate("borrowClassClass", "\354\240\200\354\236\220", nullptr));
+        QTableWidgetItem *___qtablewidgetitem2 = tableWidget->horizontalHeaderItem(2);
+        ___qtablewidgetitem2->setText(QCoreApplication::translate("borrowClassClass", "\354\266\234\355\214\220\354\202\254", nullptr));
     } // retranslateUi
 
 };

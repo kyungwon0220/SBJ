@@ -134,5 +134,25 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>selectClassClass</receiver>
+   <slot>change_borrowClass()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>95</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>103</x>
+     <y>86</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>change_borrowClass()</slot>
+ </slots>
 </ui>

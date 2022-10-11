@@ -83,6 +83,7 @@ public:
         selectClassClass->setStatusBar(statusBar);
 
         retranslateUi(selectClassClass);
+        QObject::connect(pushButton, SIGNAL(clicked()), selectClassClass, SLOT(change_borrowClass()));
 
         QMetaObject::connectSlotsByName(selectClassClass);
     } // setupUi

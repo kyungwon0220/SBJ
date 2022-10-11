@@ -102,15 +102,30 @@
      <string>검색</string>
     </property>
    </widget>
-   <widget class="QTableView" name="tableView">
+   <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>270</y>
-      <width>351</width>
-      <height>261</height>
+      <x>90</x>
+      <y>290</y>
+      <width>311</width>
+      <height>241</height>
      </rect>
     </property>
+    <column>
+     <property name="text">
+      <string>제목</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>저자</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>출판사</string>
+     </property>
+    </column>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -135,5 +150,42 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>cellDoubleClicked(int,int)</signal>
+   <receiver>borrowClassClass</receiver>
+   <slot>show_book_info()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>264</x>
+     <y>419</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>336</x>
+     <y>602</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>borrowClassClass</receiver>
+   <slot>search_book()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>264</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>395</x>
+     <y>116</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>show_book_info()</slot>
+  <slot>search_book()</slot>
+ </slots>
 </ui>

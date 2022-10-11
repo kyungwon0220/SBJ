@@ -18,6 +18,6 @@ void loginClass::change_select_ui() {
 		select->show();
 	}
 	else {
-		QMessageBox::warning(this, "wrong", "asf");
+		QMessageBox::warning(this, "wrong", "error");
 	}
 }

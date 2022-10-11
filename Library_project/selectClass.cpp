@@ -8,3 +8,8 @@ selectClass::selectClass(QWidget *parent)
 
 selectClass::~selectClass()
 {}
+void selectClass::change_borrowClass() {
+	hide();
+	borrow = new borrowClass(this);
+	borrow->show();
+}
