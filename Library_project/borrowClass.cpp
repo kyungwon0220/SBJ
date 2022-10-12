@@ -22,6 +22,11 @@ string borrowClass::readFileIntoString(const string& path) {
 	ss << input_file.rdbuf();
 	return ss.str();
 }
+int borrowClass::returncurrenRow() {
+	static int row = ui.tableWidget->currentRow();
+	int* prow = &row;
+	return row;
+}
 void borrowClass::init() {
 
 	string filename("C:\\Users\\KOSTA\\Desktop\\book_info\\book_info\\book_info.csv");
@@ -32,7 +37,7 @@ void borrowClass::init() {
 
 	istringstream sstream(file_contents);
 	string record;
-	string book_info[15][5];
+	string book_info[15][6];
 	int i = 0;
 	int j = 0;
 	while (std::getline(sstream, record)) {
@@ -40,7 +45,7 @@ void borrowClass::init() {
 		while (std::getline(line, record, delimiter)) {
 			book_info[i][j] = record;
 			j++;
-			if (j > 4) {
+			if (j > 5) {
 				j = 0;
 				i++;
 			}
@@ -55,8 +60,10 @@ void borrowClass::init() {
 	ui.tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
 }
 void borrowClass::show_book_info() {
-	int row = ui.tableWidget->currentRow();
+	//extern int row;
+	int row = returncurrenRow();
 	booki = new bookinfoClass(this);
+	//QMessageBox::information(this, "login", QString::number(row));
 	booki->show();
 }
 void borrowClass::search_book() {

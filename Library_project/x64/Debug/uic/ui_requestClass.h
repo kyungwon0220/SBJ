@@ -26,9 +26,9 @@ class Ui_requestClassClass
 {
 public:
     QWidget *centralWidget;
-    QLineEdit *lineEdit;
+    QLineEdit *name_lineEdit;
     QPushButton *pushButton;
-    QLineEdit *lineEdit_2;
+    QLineEdit *author_lineEdit;
     QLabel *label;
     QLabel *label_2;
     QMenuBar *menuBar;
@@ -42,15 +42,15 @@ public:
         requestClassClass->resize(511, 340);
         centralWidget = new QWidget(requestClassClass);
         centralWidget->setObjectName("centralWidget");
-        lineEdit = new QLineEdit(centralWidget);
-        lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(160, 70, 251, 41));
+        name_lineEdit = new QLineEdit(centralWidget);
+        name_lineEdit->setObjectName("name_lineEdit");
+        name_lineEdit->setGeometry(QRect(160, 70, 251, 41));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(250, 200, 81, 41));
-        lineEdit_2 = new QLineEdit(centralWidget);
-        lineEdit_2->setObjectName("lineEdit_2");
-        lineEdit_2->setGeometry(QRect(160, 130, 251, 41));
+        author_lineEdit = new QLineEdit(centralWidget);
+        author_lineEdit->setObjectName("author_lineEdit");
+        author_lineEdit->setGeometry(QRect(160, 130, 251, 41));
         label = new QLabel(centralWidget);
         label->setObjectName("label");
         label->setGeometry(QRect(90, 80, 48, 21));
@@ -74,6 +74,7 @@ public:
         requestClassClass->setStatusBar(statusBar);
 
         retranslateUi(requestClassClass);
+        QObject::connect(pushButton, SIGNAL(clicked()), requestClassClass, SLOT(storeRequest()));
 
         QMetaObject::connectSlotsByName(requestClassClass);
     } // setupUi

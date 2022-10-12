@@ -12,10 +12,9 @@ public:
 	signupClass(QWidget *parent = nullptr);
 	~signupClass();
 
-	
-
 private:
 	Ui::signupClassClass ui;
+
 public slots:
 	void signup_done();
 	void check_duplicate_id();

@@ -31,6 +31,7 @@ public:
     QLabel *book_photo;
     QLabel *book_name;
     QLabel *book_info;
+    QLabel *book_author;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -53,13 +54,43 @@ public:
         pushButton_3->setGeometry(QRect(320, 360, 75, 24));
         book_photo = new QLabel(centralWidget);
         book_photo->setObjectName("book_photo");
-        book_photo->setGeometry(QRect(50, 50, 161, 201));
+        book_photo->setGeometry(QRect(30, 30, 171, 221));
+        book_photo->setScaledContents(true);
         book_name = new QLabel(centralWidget);
         book_name->setObjectName("book_name");
-        book_name->setGeometry(QRect(250, 40, 191, 51));
+        book_name->setGeometry(QRect(230, 80, 191, 51));
+        QFont font;
+        font.setPointSize(13);
+        font.setBold(true);
+        book_name->setFont(font);
+        book_name->setStyleSheet(QString::fromUtf8(""));
+        book_name->setMidLineWidth(0);
+        book_name->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         book_info = new QLabel(centralWidget);
         book_info->setObjectName("book_info");
-        book_info->setGeometry(QRect(260, 150, 181, 141));
+        book_info->setGeometry(QRect(30, 270, 411, 71));
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(book_info->sizePolicy().hasHeightForWidth());
+        book_info->setSizePolicy(sizePolicy);
+        QFont font1;
+        font1.setPointSize(11);
+        book_info->setFont(font1);
+        book_info->setAcceptDrops(true);
+        book_info->setStyleSheet(QString::fromUtf8("style=\"word-break: break-all;\n"
+""));
+        book_info->setFrameShape(QFrame::NoFrame);
+        book_info->setLineWidth(1);
+        book_info->setTextFormat(Qt::PlainText);
+        book_info->setAlignment(Qt::AlignCenter);
+        book_author = new QLabel(centralWidget);
+        book_author->setObjectName("book_author");
+        book_author->setGeometry(QRect(230, 150, 191, 51));
+        book_author->setFont(font);
+        book_author->setStyleSheet(QString::fromUtf8(""));
+        book_author->setMidLineWidth(0);
+        book_author->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         bookinfoClassClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(bookinfoClassClass);
         menuBar->setObjectName("menuBar");
@@ -86,6 +117,7 @@ public:
         book_photo->setText(QString());
         book_name->setText(QString());
         book_info->setText(QString());
+        book_author->setText(QString());
     } // retranslateUi
 
 };

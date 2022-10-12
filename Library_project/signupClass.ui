@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>479</width>
+    <width>475</width>
     <height>628</height>
    </rect>
   </property>
@@ -14,23 +14,36 @@
    <string>signupClass</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLineEdit" name="lineEdit_6">
+   <widget class="QCheckBox" name="checkBox">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>250</y>
-      <width>121</width>
-      <height>31</height>
+      <x>320</x>
+      <y>200</y>
+      <width>111</width>
+      <height>20</height>
      </rect>
     </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
+    <property name="text">
+     <string>show pw</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>140</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>confirm</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>170</x>
       <y>430</y>
       <width>121</width>
       <height>51</height>
@@ -40,41 +53,10 @@
      <string>Signup</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>80</y>
-      <width>111</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>20</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>회원가입</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_5">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>190</y>
-      <width>121</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="lineEdit_4">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>170</x>
       <y>140</y>
       <width>121</width>
       <height>31</height>
@@ -84,7 +66,7 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>120</x>
       <y>140</y>
       <width>31</width>
       <height>31</height>
@@ -99,46 +81,23 @@
      <string>ID:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLineEdit" name="lineEdit_6">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>170</x>
       <y>250</y>
-      <width>111</width>
+      <width>121</width>
       <height>31</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>pw confirm:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>190</y>
-      <width>111</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>password:</string>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
     </property>
    </widget>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>90</x>
       <y>300</y>
       <width>51</width>
       <height>31</height>
@@ -153,48 +112,10 @@
      <string>name:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_7">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>300</y>
-      <width>121</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_8">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>350</y>
-      <width>121</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_7">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>350</y>
-      <width>121</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>date of birth:</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>320</x>
       <y>350</y>
       <width>111</width>
       <height>31</height>
@@ -209,23 +130,38 @@
      <string>ex: 981201</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QLineEdit" name="lineEdit_7">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>140</y>
-      <width>75</width>
-      <height>24</height>
+      <x>170</x>
+      <y>300</y>
+      <width>121</width>
+      <height>31</height>
      </rect>
     </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>80</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>confirm</string>
+     <string>회원가입</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>320</x>
       <y>170</y>
       <width>111</width>
       <height>21</height>
@@ -235,17 +171,81 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; color:#ff0000;&quot;&gt;ID not confirmed&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox">
+   <widget class="QLineEdit" name="lineEdit_5">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>200</y>
-      <width>111</width>
-      <height>20</height>
+      <x>170</x>
+      <y>190</y>
+      <width>121</width>
+      <height>31</height>
      </rect>
     </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_8">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>350</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>350</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>show pw</string>
+     <string>date of birth:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>190</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>password:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>250</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>pw confirm:</string>
     </property>
    </widget>
   </widget>
@@ -254,7 +254,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>479</width>
+     <width>475</width>
      <height>22</height>
     </rect>
    </property>
@@ -273,18 +273,18 @@
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton</sender>
-   <signal>clicked()</signal>
+   <sender>checkBox</sender>
+   <signal>toggled(bool)</signal>
    <receiver>signupClassClass</receiver>
-   <slot>signup_done()</slot>
+   <slot>pw_showhide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>227</x>
-     <y>479</y>
+     <x>357</x>
+     <y>250</y>
     </hint>
     <hint type="destinationlabel">
-     <x>294</x>
-     <y>472</y>
+     <x>394</x>
+     <y>276</y>
     </hint>
    </hints>
   </connection>
@@ -295,12 +295,12 @@
    <slot>check_duplicate_id()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>383</x>
-     <y>183</y>
+     <x>377</x>
+     <y>185</y>
     </hint>
     <hint type="destinationlabel">
-     <x>294</x>
-     <y>116</y>
+     <x>388</x>
+     <y>100</y>
     </hint>
    </hints>
   </connection>
@@ -311,37 +311,36 @@
    <slot>text_changed()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>238</x>
-     <y>188</y>
+     <x>227</x>
+     <y>194</y>
     </hint>
     <hint type="destinationlabel">
-     <x>294</x>
-     <y>57</y>
+     <x>298</x>
+     <y>63</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>checkBox</sender>
-   <signal>toggled(bool)</signal>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
    <receiver>signupClassClass</receiver>
-   <slot>pw_showhide()</slot>
+   <slot>signup_done()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>356</x>
-     <y>246</y>
+     <x>238</x>
+     <y>491</y>
     </hint>
     <hint type="destinationlabel">
-     <x>375</x>
-     <y>274</y>
+     <x>369</x>
+     <y>437</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
-  <slot>signup_done()</slot>
+  <slot>pw_showhide()</slot>
   <slot>check_duplicate_id()</slot>
   <slot>text_changed()</slot>
-  <slot>dobnumber_count()</slot>
-  <slot>pw_showhide()</slot>
+  <slot>signup_done()</slot>
  </slots>
 </ui>

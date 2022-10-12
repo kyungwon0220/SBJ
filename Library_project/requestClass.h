@@ -1,7 +1,9 @@
 #pragma once
 
 #include <QMainWindow>
+#include <QMessageBox>
 #include "ui_requestClass.h"
+#include <string>
 
 class requestClass : public QMainWindow
 {
@@ -13,4 +15,8 @@ public:
 
 private:
 	Ui::requestClassClass ui;
+
+public slots:
+	void storeRequest();
+
 };

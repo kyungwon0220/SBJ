@@ -16,13 +16,13 @@ void loginClass::change_select_ui() {
 	string idbuffer = id.toStdString();
 	string pwbuffer = password.toStdString();
 
-	if (CsvLogin(idbuffer,pwbuffer) == 0) {
+	if (CsvLogin(idbuffer, pwbuffer) == 0) {
 		QMessageBox::information(this, "Login", "Id, Passward correct");
 		select = new selectClass(this);
 		hide();
 		select->show();
 	}
-	else{
+	else {
 		QMessageBox::warning(this, "Error", "wrong ID or Password ");
 	}
 }

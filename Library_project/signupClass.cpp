@@ -4,19 +4,19 @@
 #include <QIntValidator>	//생년원일 숫자로만 받기
 
 
-signupClass::signupClass(QWidget *parent)
+signupClass::signupClass(QWidget* parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
 	ui.label_3->setText("ID not confirmed");	// ID not confirmed 문구로 ID 중복확인 클릭했는지 체크하기 위해 초기상태 지정
-	ui.label_3->setStyleSheet("color:red;" "font-weight:700"); 
+	ui.label_3->setStyleSheet("color:red;" "font-weight:700");
 	ui.lineEdit_8->setValidator(new QIntValidator); // 생년월일 숫자로만 받기
 }
 
 signupClass::~signupClass()
 {}
 
-void signupClass::signup_done() 
+void signupClass::signup_done()
 {
 	QString id_confirm = ui.label_3->text();
 	QString id = ui.lineEdit_4->text();
@@ -32,25 +32,25 @@ void signupClass::signup_done()
 	string pwconbuffer = password_confirm.toStdString();
 	string namebuffer = name.toStdString();
 	string dobbuffer = dob.toStdString();
-	
 
-	if (id_confirm == "ID not confirmed"){  // ID 중복확인 
+
+	if (id_confirm == "ID not confirmed") {  // ID 중복확인 
 		QMessageBox::warning(this, "ID should be confirmed", "Please confirm ID");
 	}
 	else if (n != 6) {  // 생년월일 무조건 6자리
 		QMessageBox::warning(this, "wrong", "please check date of birth again");
 	}
 	// 빈칸 있거나 비밀번호 2번 입력시에 서로 다르면 경고
-	else if (pwbuffer == pwconbuffer && (id != "" && password != "" && password_confirm != "" && name != "" && dob != "")) 
+	else if (pwbuffer == pwconbuffer && (id != "" && password != "" && password_confirm != "" && name != "" && dob != ""))
 	{
-			QMessageBox::information(this, "Register", "Registration Sucess");
-			CsvRegister(idbuffer, pwbuffer, pwconbuffer, namebuffer, dobbuffer);
-			close();
+		QMessageBox::information(this, "Register", "Registration Sucess");
+		CsvRegister(idbuffer, pwbuffer, pwconbuffer, namebuffer, dobbuffer);
+		close();
 	}
-		
+
 	else {
 		QMessageBox::warning(this, "wrong", "password does not match or slot empty");
-		}
+	}
 }
 
 void signupClass::check_duplicate_id() // ID 중복확인 
@@ -68,7 +68,7 @@ void signupClass::check_duplicate_id() // ID 중복확인
 		QMessageBox::warning(this, "empty", "please check ID again");
 	}
 
-	else{
+	else {
 		QMessageBox::information(this, "ID confirmed", "You can use this ID");
 		ui.label_3->setText("ID confirmed");
 		ui.label_3->setStyleSheet("color:green;" "font-weight:700");
