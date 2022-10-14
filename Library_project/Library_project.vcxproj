@@ -89,6 +89,7 @@
     <ClCompile Include="adLoginClass.cpp" />
     <ClCompile Include="administratorClass.cpp" />
     <ClCompile Include="bookinfoClass.cpp" />
+    <ClCompile Include="DeleteBookClass.cpp" />
     <ClCompile Include="requestClass.cpp" />
     <ClCompile Include="selectClass.cpp" />
     <ClCompile Include="signupClass.cpp" />
@@ -98,6 +99,7 @@
     <QtUic Include="administratorClass.ui" />
     <QtUic Include="bookinfoClass.ui" />
     <QtUic Include="borrowClass.ui" />
+    <QtUic Include="DeleteBookClass.ui" />
     <QtUic Include="Library_project.ui" />
     <QtMoc Include="Library_project.h" />
     <ClCompile Include="borrowClass.cpp" />
@@ -135,6 +137,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="AddBookClass.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="DeleteBookClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

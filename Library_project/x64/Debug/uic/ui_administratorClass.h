@@ -77,6 +77,7 @@ public:
 
         retranslateUi(administratorClassClass);
         QObject::connect(pushButton, SIGNAL(clicked()), administratorClassClass, SLOT(change_addbook()));
+        QObject::connect(pushButton_2, SIGNAL(clicked()), administratorClassClass, SLOT(change_deletebook()));
 
         QMetaObject::connectSlotsByName(administratorClassClass);
     } // setupUi

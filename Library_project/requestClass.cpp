@@ -36,6 +36,7 @@ void requestClass::storeRequest() {
 	else {
 		MyFile << name_h << "," << author_h << endl;
 		QMessageBox::information(this, "request", QString::fromLocal8Bit("요청 성공"));
+		close();
 		MyFile.close();
 	}
 }

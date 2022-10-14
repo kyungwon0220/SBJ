@@ -1,1 +1,5 @@
-﻿  Library_project.vcxproj -> C:\Users\KOSTA\source\repos\Library_project\x64\Debug\Library_project.exe
+﻿  DeleteBookClass.cpp
+C:\Users\KOSTA\source\repos\Library_project\DeleteBookClass.cpp(1,1): warning C4828: 파일에 0x9e1 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\KOSTA\source\repos\Library_project\DeleteBookClass.cpp(1,1): warning C4828: 파일에 0x9e4 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\KOSTA\source\repos\Library_project\DeleteBookClass.cpp(62,16): warning C4834: 'nodiscard' 특성이 포함된 함수의 반환 값을 버리는 중
+  Library_project.vcxproj -> C:\Users\KOSTA\source\repos\Library_project\x64\Debug\Library_project.exe

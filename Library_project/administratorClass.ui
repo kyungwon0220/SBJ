@@ -132,8 +132,25 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>administratorClassClass</receiver>
+   <slot>change_deletebook()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>246</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>259</x>
+     <y>168</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>change_addbook()</slot>
+  <slot>change_deletebook()</slot>
  </slots>
 </ui>

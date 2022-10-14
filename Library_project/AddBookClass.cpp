@@ -52,5 +52,6 @@ void AddBookClass::add_book() {
 		MyFile << book_name << "," << book_author << "," << book_publishing <<"," << book_contents<<","<< book_number<<","<< book_image<<endl;
 		QMessageBox::information(this, "request", QString::fromLocal8Bit("요청 성공"));
 		MyFile.close();
+		close();
 	}
 }

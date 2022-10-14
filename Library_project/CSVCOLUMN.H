@@ -20,6 +20,7 @@ int CsvCulumn(string path) {
 		}
 
 	}
+	myfile.close();
 	int column_num = 0;
 	column_num = bufferout.size() / 6;
 	return column_num;
