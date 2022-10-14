@@ -132,8 +132,25 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Library_projectClass</receiver>
+   <slot>change_adlogin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>29</x>
+     <y>64</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>56</x>
+     <y>551</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>change_login_ui()</slot>
+  <slot>change_adlogin()</slot>
  </slots>
 </ui>

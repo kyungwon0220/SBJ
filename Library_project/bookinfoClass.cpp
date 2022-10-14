@@ -19,7 +19,7 @@ void bookinfoClass::init() {
 
 	vector<string>bufferout;
 	string bookBuffer;
-	borrowClass bc = new borrowClass(this);
+	borrowClass bc;
 	int row = bc.returncurrenRow();
 
 	int searchrow = row * 6;

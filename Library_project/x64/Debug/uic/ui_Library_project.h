@@ -78,6 +78,7 @@ public:
 
         retranslateUi(Library_projectClass);
         QObject::connect(pushButton_2, SIGNAL(clicked()), Library_projectClass, SLOT(change_login_ui()));
+        QObject::connect(pushButton, SIGNAL(clicked()), Library_projectClass, SLOT(change_adlogin()));
 
         QMetaObject::connectSlotsByName(Library_projectClass);
     } // setupUi

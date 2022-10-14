@@ -1,8 +1,1 @@
-﻿  requestClass.cpp
-C:\Users\KOSTA\source\repos\Library_project\requestClass.cpp(1,1): warning C4828: 파일에 0x3b1 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\KOSTA\source\repos\Library_project\requestClass.cpp(1,1): warning C4828: 파일에 0x3b2 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\KOSTA\source\repos\Library_project\requestClass.cpp(1,1): warning C4828: 파일에 0x3b6 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\KOSTA\source\repos\Library_project\requestClass.cpp(1,1): warning C4828: 파일에 0x3b7 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\KOSTA\source\repos\Library_project\requestClass.cpp(1,1): warning C4828: 파일에 0x3b8 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\KOSTA\source\repos\Library_project\requestClass.cpp(1,1): warning C4828: 파일에 0x3b9 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-  Library_project.vcxproj -> C:\Users\KOSTA\source\repos\Library_project\x64\Debug\Library_project.exe
+﻿  Library_project.vcxproj -> C:\Users\KOSTA\source\repos\Library_project\x64\Debug\Library_project.exe

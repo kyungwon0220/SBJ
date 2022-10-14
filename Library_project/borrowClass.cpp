@@ -1,6 +1,8 @@
 #include "borrowClass.h"
 #include <iostream>
+#include "CSVCOLUMN.h"
 using namespace std;
+
 
 borrowClass::borrowClass(QWidget *parent)
 	: QMainWindow(parent)
@@ -24,7 +26,6 @@ string borrowClass::readFileIntoString(const string& path) {
 }
 int borrowClass::returncurrenRow() {
 	static int row = ui.tableWidget->currentRow();
-	int* prow = &row;
 	return row;
 }
 void borrowClass::init() {
@@ -37,7 +38,8 @@ void borrowClass::init() {
 
 	istringstream sstream(file_contents);
 	string record;
-	string book_info[15][6];
+	int culumn = CsvCulumn(filename);
+	string book_info[100][6];
 	int i = 0;
 	int j = 0;
 	while (std::getline(sstream, record)) {
@@ -51,7 +53,7 @@ void borrowClass::init() {
 			}
 		}
 	}
-	for (int i = 0; i < 15; i++) {
+	for (int i = 0; i < CsvCulumn(filename); i++) {
 			ui.tableWidget->insertRow(ui.tableWidget->rowCount());
 			ui.tableWidget->setItem(ui.tableWidget->rowCount() - 1, 0, new QTableWidgetItem(QString::fromLocal8Bit(book_info[i][0])));
 			ui.tableWidget->setItem(ui.tableWidget->rowCount() - 1, 1, new QTableWidgetItem(QString::fromLocal8Bit(book_info[i][1])));

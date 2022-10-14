@@ -3,6 +3,7 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_Library_project.h"
 #include "loginClass.h"
+#include "adLoginClass.h"
 
 class Library_project : public QMainWindow
 {
@@ -15,7 +16,9 @@ public:
 private:
     Ui::Library_projectClass ui;
     loginClass* login;
+    adLoginClass* adlogin;
 
 public slots:
     void change_login_ui();
+    void change_adlogin();
 };

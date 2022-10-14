@@ -14,3 +14,8 @@ void Library_project::change_login_ui() {
     login = new loginClass(this);
     login->show();
 }
+void Library_project::change_adlogin() {
+    hide();
+    adlogin = new adLoginClass(this);
+    adlogin->show();
+}

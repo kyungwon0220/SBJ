@@ -20,9 +20,12 @@ void requestClass::storeRequest() {
 	QString book_name = ui.name_lineEdit->text();
 	QString book_author = ui.author_lineEdit->text();
 	
-	string strname = book_name.toStdString();
-	string strauthor = book_author.toStdString();
-	setlocale(LC_ALL, "Korean");
+	QByteArray qbname = book_name.toLocal8Bit();
+	QByteArray qbauthor = book_author.toLocal8Bit();
+
+	const char* name_h = qbname.data();
+	const char* author_h = qbauthor.data();
+
 	ofstream MyFile;
 	MyFile.open("C:\\Users\\KOSTA\\Desktop\\book_info\\book_request\\book_request.csv", ios::out | ios::ate | ios::app);
 
@@ -31,7 +34,7 @@ void requestClass::storeRequest() {
 		QMessageBox::warning(this, "request", "failed to open");
 	}
 	else {
-		MyFile << strname << "," << strauthor << endl;
+		MyFile << name_h << "," << author_h << endl;
 		QMessageBox::information(this, "request", QString::fromLocal8Bit("요청 성공"));
 		MyFile.close();
 	}

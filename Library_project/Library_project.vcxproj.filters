@@ -58,6 +58,15 @@
     <ClCompile Include="signupClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="administratorClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="adLoginClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AddBookClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="borrowClass.h">
@@ -78,6 +87,15 @@
     <QtMoc Include="signupClass.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="administratorClass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="adLoginClass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="AddBookClass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="borrowClass.ui">
@@ -96,6 +114,15 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="signupClass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="administratorClass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="adLoginClass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="AddBookClass.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
