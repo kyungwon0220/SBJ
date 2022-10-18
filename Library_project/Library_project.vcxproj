@@ -91,6 +91,7 @@
     <ClCompile Include="bookinfoClass.cpp" />
     <ClCompile Include="DeleteBookClass.cpp" />
     <ClCompile Include="requestClass.cpp" />
+    <ClCompile Include="returnBookClass.cpp" />
     <ClCompile Include="selectClass.cpp" />
     <ClCompile Include="signupClass.cpp" />
     <QtRcc Include="Library_project.qrc" />
@@ -108,6 +109,7 @@
     <ClCompile Include="main.cpp" />
     <QtUic Include="loginClass.ui" />
     <QtUic Include="requestClass.ui" />
+    <QtUic Include="returnBookClass.ui" />
     <QtUic Include="selectClass.ui" />
     <QtUic Include="signupClass.ui" />
   </ItemGroup>
@@ -140,6 +142,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="DeleteBookClass.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="returnBookClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

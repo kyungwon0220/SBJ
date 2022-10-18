@@ -10,6 +10,7 @@
 #define UI_SIGNUPCLASS_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QLabel>
@@ -43,6 +44,7 @@ public:
     QLabel *label_7;
     QLabel *label_5;
     QLabel *label_4;
+    QPushButton *pushButton_3;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -115,6 +117,14 @@ public:
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(40, 250, 111, 31));
         label_4->setFont(font);
+        pushButton_3 = new QPushButton(centralWidget);
+        pushButton_3->setObjectName("pushButton_3");
+        pushButton_3->setGeometry(QRect(10, 10, 51, 41));
+        pushButton_3->setStyleSheet(QString::fromUtf8("background: transparent"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("../../../Desktop/UI.Zip/arrow.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_3->setIcon(icon);
+        pushButton_3->setIconSize(QSize(20, 20));
         signupClassClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(signupClassClass);
         menuBar->setObjectName("menuBar");
@@ -132,6 +142,7 @@ public:
         QObject::connect(pushButton_2, SIGNAL(clicked()), signupClassClass, SLOT(check_duplicate_id()));
         QObject::connect(lineEdit_4, SIGNAL(textChanged(QString)), signupClassClass, SLOT(text_changed()));
         QObject::connect(pushButton, SIGNAL(clicked()), signupClassClass, SLOT(signup_done()));
+        QObject::connect(pushButton_3, SIGNAL(clicked()), signupClassClass, SLOT(signup_close()));
 
         QMetaObject::connectSlotsByName(signupClassClass);
     } // setupUi
@@ -150,6 +161,7 @@ public:
         label_7->setText(QCoreApplication::translate("signupClassClass", "date of birth:", nullptr));
         label_5->setText(QCoreApplication::translate("signupClassClass", "password:", nullptr));
         label_4->setText(QCoreApplication::translate("signupClassClass", "pw confirm:", nullptr));
+        pushButton_3->setText(QString());
     } // retranslateUi
 
 };

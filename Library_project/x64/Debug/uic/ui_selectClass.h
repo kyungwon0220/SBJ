@@ -85,6 +85,7 @@ public:
         retranslateUi(selectClassClass);
         QObject::connect(pushButton, SIGNAL(clicked()), selectClassClass, SLOT(change_borrowClass()));
         QObject::connect(pushButton_3, SIGNAL(clicked()), selectClassClass, SLOT(change_requestClass()));
+        QObject::connect(pushButton_2, SIGNAL(clicked()), selectClassClass, SLOT(change_returnClass()));
 
         QMetaObject::connectSlotsByName(selectClassClass);
     } // setupUi

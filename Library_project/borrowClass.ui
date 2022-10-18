@@ -127,6 +127,32 @@
      </property>
     </column>
    </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../Desktop/UI.Zip/arrow.png</normaloff>../../../Desktop/UI.Zip/arrow.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -183,9 +209,26 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>borrowClassClass</receiver>
+   <slot>borrow_close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>35</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>106</x>
+     <y>54</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>show_book_info()</slot>
   <slot>search_book()</slot>
+  <slot>borrow_close()</slot>
  </slots>
 </ui>

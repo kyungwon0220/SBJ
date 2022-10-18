@@ -70,6 +70,9 @@
     <ClCompile Include="DeleteBookClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="returnBookClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="borrowClass.h">
@@ -102,6 +105,9 @@
     <QtMoc Include="DeleteBookClass.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="returnBookClass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="borrowClass.ui">
@@ -132,6 +138,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="DeleteBookClass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="returnBookClass.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

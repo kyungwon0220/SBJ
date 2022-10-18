@@ -191,5 +191,42 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>bookinfoClassClass</receiver>
+   <slot>info_close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>408</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>406</x>
+     <y>439</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>bookinfoClassClass</receiver>
+   <slot>borrow_book()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>132</x>
+     <y>401</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>155</x>
+     <y>435</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>info_close()</slot>
+  <slot>borrow_book()</slot>
+ </slots>
 </ui>

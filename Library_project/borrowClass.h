@@ -4,7 +4,9 @@
 #include <QMessageBox>
 #include <iostream>
 #include <fstream>
+#include <vector>
 #include <sstream>
+#include <string>
 #include "ui_borrowClass.h"
 #include "bookinfoClass.h"
 
@@ -27,5 +29,6 @@ private:
 public slots:
 	void show_book_info();
 	void search_book();
+	void borrow_close();
 
 };

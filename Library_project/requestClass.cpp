@@ -27,7 +27,7 @@ void requestClass::storeRequest() {
 	const char* author_h = qbauthor.data();
 
 	ofstream MyFile;
-	MyFile.open("C:\\Users\\KOSTA\\Desktop\\book_info\\book_request\\book_request.csv", ios::out | ios::ate | ios::app);
+	MyFile.open("book_request.csv", ios::out | ios::ate | ios::app);
 
 
 	if (!MyFile.is_open()) {

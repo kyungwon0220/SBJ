@@ -42,7 +42,7 @@ void AddBookClass::add_book() {
 
 
 	ofstream MyFile;
-	MyFile.open("C:\\Users\\KOSTA\\Desktop\\book_info\\book_info\\book_info.csv", ios::out | ios::ate | ios::app);
+	MyFile.open("book_info.csv", ios::out | ios::ate | ios::app);
 
 
 	if (!MyFile.is_open()) {

@@ -20,4 +20,5 @@ public slots:
 	void check_duplicate_id();
 	void text_changed();
 	void pw_showhide();
+	void signup_close();
 };

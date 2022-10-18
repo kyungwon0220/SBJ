@@ -25,6 +25,9 @@ void signupClass::signup_done()
 	QString name = ui.lineEdit_7->text();
 	QString dob = ui.lineEdit_8->text();
 	int n = dob.size(); //생년월일
+	//한글 깨짐 방지
+	QByteArray bytes = name.toLocal8Bit();
+	const char* name_hangul = bytes.data();
 
 	// csv에 넣기위해 string으로 변환
 	string idbuffer = id.toStdString();
@@ -32,6 +35,7 @@ void signupClass::signup_done()
 	string pwconbuffer = password_confirm.toStdString();
 	string namebuffer = name.toStdString();
 	string dobbuffer = dob.toStdString();
+
 
 
 	if (id_confirm == "ID not confirmed") {  // ID 중복확인 
@@ -44,7 +48,7 @@ void signupClass::signup_done()
 	else if (pwbuffer == pwconbuffer && (id != "" && password != "" && password_confirm != "" && name != "" && dob != ""))
 	{
 		QMessageBox::information(this, "Register", "Registration Sucess");
-		CsvRegister(idbuffer, pwbuffer, pwconbuffer, namebuffer, dobbuffer);
+		CsvRegister(idbuffer, pwbuffer, pwconbuffer, name_hangul, dobbuffer);
 		close();
 	}
 
@@ -96,3 +100,7 @@ void signupClass::pw_showhide() // 비밀번호 show % hide
 	line6->setEchoMode(showhide->checkState() == Qt::Checked ? QLineEdit::Normal : QLineEdit::Password);
 }
 
+void signupClass::signup_close()
+{
+	close();
+}

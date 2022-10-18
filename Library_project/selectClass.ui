@@ -167,9 +167,27 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>selectClassClass</receiver>
+   <slot>change_returnClass()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>238</x>
+     <y>307</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>313</x>
+     <y>77</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>change_borrowClass()</slot>
   <slot>change_requestClass()</slot>
+  <slot>go_home()</slot>
+  <slot>change_returnClass()</slot>
  </slots>
 </ui>

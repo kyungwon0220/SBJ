@@ -3,7 +3,7 @@
 #include "CSVCOLUMN.h"
 using namespace std;
 
-
+extern int rowValue;
 borrowClass::borrowClass(QWidget *parent)
 	: QMainWindow(parent)
 {
@@ -25,12 +25,12 @@ string borrowClass::readFileIntoString(const string& path) {
 	return ss.str();
 }
 int borrowClass::returncurrenRow() {
-	static int row = ui.tableWidget->currentRow();
-	return row;
+	rowValue = ui.tableWidget->currentRow();
+	return rowValue;
 }
 void borrowClass::init() {
 
-	string filename("C:\\Users\\KOSTA\\Desktop\\book_info\\book_info\\book_info.csv");
+	string filename("book_info.csv");
 	string file_contents;
 	char delimiter = ',';
 
@@ -67,6 +67,9 @@ void borrowClass::show_book_info() {
 	booki = new bookinfoClass(this);
 	//QMessageBox::information(this, "login", QString::number(row));
 	booki->show();
+}
+void borrowClass::borrow_close() {
+	close();
 }
 void borrowClass::search_book() {
 	QList<QTableWidgetItem*> searchItem;

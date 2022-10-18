@@ -1,5 +1,8 @@
 #include "Library_project.h"
 #include <QtWidgets/QApplication>
+vector<string> loginuserinfo;
+
+int rowValue = 10;
 
 int aaa = 10;
 

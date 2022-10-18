@@ -248,6 +248,32 @@
      <string>pw confirm:</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../Desktop/UI.Zip/arrow.png</normaloff>../../../Desktop/UI.Zip/arrow.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -336,11 +362,28 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>signupClassClass</receiver>
+   <slot>signup_close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>36</x>
+     <y>66</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>35</x>
+     <y>104</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>pw_showhide()</slot>
   <slot>check_duplicate_id()</slot>
   <slot>text_changed()</slot>
   <slot>signup_done()</slot>
+  <slot>signup_close()</slot>
  </slots>
 </ui>

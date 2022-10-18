@@ -10,6 +10,7 @@
 #define UI_BORROWCLASS_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QHeaderView>
@@ -35,6 +36,7 @@ public:
     QLineEdit *lineEdit;
     QPushButton *pushButton;
     QTableWidget *tableWidget;
+    QPushButton *pushButton_3;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -79,6 +81,14 @@ public:
         tableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem2);
         tableWidget->setObjectName("tableWidget");
         tableWidget->setGeometry(QRect(90, 290, 311, 241));
+        pushButton_3 = new QPushButton(centralWidget);
+        pushButton_3->setObjectName("pushButton_3");
+        pushButton_3->setGeometry(QRect(0, 0, 51, 41));
+        pushButton_3->setStyleSheet(QString::fromUtf8("background: transparent"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("../../../Desktop/UI.Zip/arrow.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_3->setIcon(icon);
+        pushButton_3->setIconSize(QSize(20, 20));
         borrowClassClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(borrowClassClass);
         menuBar->setObjectName("menuBar");
@@ -94,6 +104,7 @@ public:
         retranslateUi(borrowClassClass);
         QObject::connect(tableWidget, SIGNAL(cellDoubleClicked(int,int)), borrowClassClass, SLOT(show_book_info()));
         QObject::connect(pushButton, SIGNAL(clicked()), borrowClassClass, SLOT(search_book()));
+        QObject::connect(pushButton_3, SIGNAL(clicked()), borrowClassClass, SLOT(borrow_close()));
 
         QMetaObject::connectSlotsByName(borrowClassClass);
     } // setupUi
@@ -115,6 +126,7 @@ public:
         ___qtablewidgetitem1->setText(QCoreApplication::translate("borrowClassClass", "\354\240\200\354\236\220", nullptr));
         QTableWidgetItem *___qtablewidgetitem2 = tableWidget->horizontalHeaderItem(2);
         ___qtablewidgetitem2->setText(QCoreApplication::translate("borrowClassClass", "\354\266\234\355\214\220\354\202\254", nullptr));
+        pushButton_3->setText(QString());
     } // retranslateUi
 
 };

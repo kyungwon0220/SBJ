@@ -15,7 +15,7 @@ DeleteBookClass::~DeleteBookClass()
 {}
 void DeleteBookClass::init() {
 
-	string filename("C:\\Users\\KOSTA\\Desktop\\book_info\\book_info\\book_info.csv");
+	string filename("book_info.csv");
 	string file_contents;
 	char delimiter = ',';
 
@@ -58,7 +58,7 @@ void DeleteBookClass::delete_book() {
 		string bookBuffer;
 		int delrow = row * 6;
 
-		ifstream myfile("C:\\Users\\KOSTA\\Desktop\\book_info\\book_info\\book_info.csv");
+		ifstream myfile("book_info.csv");
 		myfile.getloc();
 		while (myfile.peek() != EOF) {
 
@@ -77,9 +77,9 @@ void DeleteBookClass::delete_book() {
 			it = bufferout.erase(it);
 		}
 		int r;
-		r = unlink("C:\\Users\\KOSTA\\Desktop\\book_info\\book_info\\book_info.csv");
+		r = unlink("book_info.csv");
 		ofstream MyFile;
-		MyFile.open("C:\\Users\\KOSTA\\Desktop\\book_info\\book_info\\book_info.csv", ios::out | ios::ate | ios::app);
+		MyFile.open("book_info.csv", ios::out | ios::ate | ios::app);
 		//MyFile.seekp(1, ios::beg);
 		if (!MyFile.is_open()) {
 			cout << "¾ÈµÅ~" << endl;

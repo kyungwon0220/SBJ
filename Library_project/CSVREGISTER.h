@@ -16,6 +16,6 @@ void CsvRegister(string Acc, string Pwd, string Pwd_Confirm, string Name, string
         string Dateofbirth = Dob;
         ofstream MyFile;
         MyFile.open("Account_info.csv", ios::out | ios::ate | ios::app);
-            MyFile << Acc << "," << Pwd << "," << Name << "," << Dob << endl;
+            MyFile << Acc << "," << Pwd << "," << Name << "," << Dob << ","<<"1"<<","<<" "<<","<<"3"<<","<<"0"<<","<<"1"<<endl;
         MyFile.close();
     }

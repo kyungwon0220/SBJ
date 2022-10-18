@@ -9,7 +9,7 @@ selectClass::selectClass(QWidget *parent)
 selectClass::~selectClass()
 {}
 void selectClass::change_borrowClass() {
-	hide();
+	//hide();
 	borrow = new borrowClass(this);
 	borrow->show();
 }
@@ -17,4 +17,8 @@ void selectClass::change_borrowClass() {
 void selectClass::change_requestClass() {
 	request = new requestClass(this);
 	request->show();
+}
+void selectClass::change_returnClass() {
+	re = new returnBookClass(this);
+	re->show();
 }

@@ -104,6 +104,8 @@ public:
         bookinfoClassClass->setStatusBar(statusBar);
 
         retranslateUi(bookinfoClassClass);
+        QObject::connect(pushButton_3, SIGNAL(clicked()), bookinfoClassClass, SLOT(info_close()));
+        QObject::connect(pushButton, SIGNAL(clicked()), bookinfoClassClass, SLOT(borrow_book()));
 
         QMetaObject::connectSlotsByName(bookinfoClassClass);
     } // setupUi

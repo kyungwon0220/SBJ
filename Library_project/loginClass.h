@@ -13,6 +13,7 @@ class loginClass : public QMainWindow
 public:
 	loginClass(QWidget *parent = nullptr);
 	~loginClass();
+	string return_loginid();
 
 private:
 	Ui::loginClassClass ui;
