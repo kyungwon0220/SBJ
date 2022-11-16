@@ -32,6 +32,7 @@ public:
     QLabel *book_name;
     QLabel *book_info;
     QLabel *book_author;
+    QLabel *book_num;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -91,6 +92,9 @@ public:
         book_author->setStyleSheet(QString::fromUtf8(""));
         book_author->setMidLineWidth(0);
         book_author->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        book_num = new QLabel(centralWidget);
+        book_num->setObjectName("book_num");
+        book_num->setGeometry(QRect(230, 10, 71, 41));
         bookinfoClassClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(bookinfoClassClass);
         menuBar->setObjectName("menuBar");
@@ -120,6 +124,7 @@ public:
         book_name->setText(QString());
         book_info->setText(QString());
         book_author->setText(QString());
+        book_num->setText(QString());
     } // retranslateUi
 
 };

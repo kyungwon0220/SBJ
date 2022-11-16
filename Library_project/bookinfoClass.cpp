@@ -44,6 +44,8 @@ void bookinfoClass::init() {
 	QString bauthor = QString::fromLocal8Bit(bufferout[searchrow + 1]);
 	QString binfo = QString::fromLocal8Bit(bufferout[searchrow +3]);
 	QString bimage = QString::fromLocal8Bit(bufferout[searchrow + 5]);
+    QString bnum = QString::fromLocal8Bit(bufferout[searchrow+4]);
+    ui.book_num->setText(bnum);
 	ui.book_name->setText(bname);
 	ui.book_info->setText(binfo);
 	ui.book_author->setText(bauthor);

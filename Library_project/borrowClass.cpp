@@ -82,8 +82,8 @@ void borrowClass::search_book() {
 		}
 		return;
 	}
-	searchItem = ui.tableWidget->findItems(ui.lineEdit->text(), Qt::MatchExactly | Qt::MatchRecursive);
-	//searchItem = ui.tableWidget->findItems(ui.lineEdit->text(), Qt::MatchContains | Qt::MatchRecursive);
+	//searchItem = ui.tableWidget->findItems(ui.lineEdit->text(), Qt::MatchExactly | Qt::MatchRecursive);
+	searchItem = ui.tableWidget->findItems(ui.lineEdit->text(), Qt::MatchContains | Qt::MatchRecursive);
 
 	if (searchItem.count() > 0) {
 		for (int i = 0; i < ui.tableWidget->rowCount(); i++) {
