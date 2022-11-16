@@ -10,6 +10,7 @@
 #define UI_ADDBOOKCLASS_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -53,6 +54,7 @@ public:
         book_name = new QLineEdit(centralWidget);
         book_name->setObjectName("book_name");
         book_name->setGeometry(QRect(190, 30, 221, 41));
+        book_name->setEchoMode(QLineEdit::Normal);
         book_author = new QLineEdit(centralWidget);
         book_author->setObjectName("book_author");
         book_author->setGeometry(QRect(190, 90, 221, 41));
@@ -89,10 +91,15 @@ public:
         label_5->setFont(font);
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(480, 30, 71, 71));
+        pushButton->setGeometry(QRect(480, 30, 81, 71));
         QFont font1;
         font1.setPointSize(11);
         pushButton->setFont(font1);
+        pushButton->setStyleSheet(QString::fromUtf8("background: transparent"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("../../../Desktop/UI.Zip/more.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton->setIcon(icon);
+        pushButton->setIconSize(QSize(45, 45));
         label_6 = new QLabel(centralWidget);
         label_6->setObjectName("label_6");
         label_6->setGeometry(QRect(90, 330, 81, 31));
@@ -121,12 +128,13 @@ public:
     void retranslateUi(QMainWindow *AddBookClassClass)
     {
         AddBookClassClass->setWindowTitle(QCoreApplication::translate("AddBookClassClass", "AddBookClass", nullptr));
+        book_name->setInputMask(QString());
         label->setText(QCoreApplication::translate("AddBookClassClass", "\354\240\234\353\252\251", nullptr));
         label_2->setText(QCoreApplication::translate("AddBookClassClass", "\354\240\200\354\236\220", nullptr));
         label_3->setText(QCoreApplication::translate("AddBookClassClass", "\354\266\234\355\214\220\354\202\254", nullptr));
         label_4->setText(QCoreApplication::translate("AddBookClassClass", "\353\202\264\354\232\251", nullptr));
         label_5->setText(QCoreApplication::translate("AddBookClassClass", "\354\261\205 \354\210\230", nullptr));
-        pushButton->setText(QCoreApplication::translate("AddBookClassClass", "\354\266\224\352\260\200", nullptr));
+        pushButton->setText(QString());
         label_6->setText(QCoreApplication::translate("AddBookClassClass", "\354\235\264\353\257\270\354\247\200", nullptr));
     } // retranslateUi
 

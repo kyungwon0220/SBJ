@@ -5,6 +5,7 @@ returnBookClass::returnBookClass(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
+    init();
 }
 
 returnBookClass::~returnBookClass()
@@ -59,13 +60,7 @@ int returnBookClass::BookReturn(string RequesterVelue, string BookNVelue) {
 
     for (int i = 0; i < accountbufferout.size(); i++) {
         if (accountbufferout[i] == RequesterVelue) {
-            int accountint = stoi(accountbufferout[i + 6]);
-            //대여가능회수 복구
-            accountint++;
-            //다시 스트링으로 복구
-            accountbufferout[i + 6] = to_string(accountint);
-
-            //빌린책 불러와서 배열로 분해하고. 비교한뒤, 재조합해서 다시 넣어주기
+            
 
             string accRentBooks = accountbufferout[i + 5];
             istringstream accountstr(accRentBooks);
@@ -91,8 +86,16 @@ int returnBookClass::BookReturn(string RequesterVelue, string BookNVelue) {
                 }
                 else {
                     //값이 같았다면 추가하지않음
+                    int accountint = stoi(accountbufferout[i + 6]);
+                    //대여가능회수 복구
+                    accountint++;
+                    //다시 스트링으로 복구
+                    accountbufferout[i + 6] = to_string(accountint);
 
-
+                    //빌린책 불러와서 배열로 분해하고. 비교한뒤, 재조합해서 다시 넣어주기
+                    int Bufferint = stoi(bufferout[realsearchValue]);
+                    Bufferint++;
+                    bufferout[realsearchValue] = to_string(Bufferint);
                 }
                 count++;
             }
@@ -123,9 +126,6 @@ int returnBookClass::BookReturn(string RequesterVelue, string BookNVelue) {
         }
         MyAccountFile.close();
     }
-    int Bufferint = stoi(bufferout[realsearchValue]);
-    Bufferint++;
-    bufferout[realsearchValue] = to_string(Bufferint);
 
 
     r = unlink("book_info.csv");
@@ -144,6 +144,78 @@ int returnBookClass::BookReturn(string RequesterVelue, string BookNVelue) {
         }
         MyFile.close();
         return 0;
+    }
+
+}
+void returnBookClass::init() {
+
+    extern vector<string> loginuserinfo;
+    string requester = loginuserinfo[0];
+
+    vector<string>accountbufferout;
+    string accountBuffer;
+    string borrowbooks;
+    ifstream  accountFile("Account_info.csv");
+    while (accountFile.peek() != EOF) {
+        getline(accountFile, accountBuffer);
+        istringstream ss(accountBuffer);
+
+        while (getline(ss, accountBuffer, ',')) {
+            accountbufferout.push_back(accountBuffer);
+        }
+    }
+    accountFile.close();
+    for (int i = 0; i < accountbufferout.size(); i++) {
+        if (accountbufferout[i] == requester) {
+            borrowbooks = accountbufferout[i + 5];
+            break;
+        }
+    }
+    istringstream ss(borrowbooks);
+    vector<string> buff;
+    string accountbuff;
+    while (getline(ss, accountbuff, '^')) {
+        buff.push_back(accountbuff);
+    }
+
+    for (int i = 0; i < buff.size(); i++) {
+        ui.tableWidget->insertRow(ui.tableWidget->rowCount());
+        ui.tableWidget->setItem(ui.tableWidget->rowCount() - 1, 0, new QTableWidgetItem(QString::fromLocal8Bit(buff[i])));
+    }
+    ui.tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
+}
+void returnBookClass::return_bookk() {
+    int row = ui.tableWidget->currentRow();
+    QTableWidgetItem* item1 = ui.tableWidget->item(row,0);
+    QString qitem = item1->text();
+    QByteArray qbitem = qitem.toLocal8Bit();
+    const char* item = qbitem.data();
+
+    extern vector<string> loginuserinfo;
+    string requester = loginuserinfo[0];
+    QString qrequester = QString::fromUtf8(requester);
+    QByteArray qbrequester = qrequester.toLocal8Bit();
+    const char* realrequeester = qbrequester.data();
+
+    QMessageBox::StandardButton reply;
+    QMessageBox messageBox;
+    reply = messageBox.question(this, "return", "return?");
+
+    if (reply == QMessageBox::Yes) {
+        int d = BookReturn(realrequeester, item);
+        if (d == 0) {
+            QMessageBox::information(this, "return", "success!");
+            close();
+        }
+        else if (d == 1) {
+            QMessageBox::warning(this, "return", "no return book");
+        }
+        else if (d == 3) {
+            QMessageBox::warning(this, "return", "file error");
+        }
+    }
+    else {
+        close();
     }
 
 }

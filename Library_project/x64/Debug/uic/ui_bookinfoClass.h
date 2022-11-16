@@ -10,6 +10,7 @@
 #define UI_BOOKINFOCLASS_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
@@ -33,6 +34,8 @@ public:
     QLabel *book_info;
     QLabel *book_author;
     QLabel *book_num;
+    QLabel *label;
+    QLabel *label_2;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -47,12 +50,21 @@ public:
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(90, 360, 75, 24));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("../../../Desktop/UI.Zip/select_ui/book2.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton->setIcon(icon);
         pushButton_2 = new QPushButton(centralWidget);
         pushButton_2->setObjectName("pushButton_2");
         pushButton_2->setGeometry(QRect(210, 360, 75, 24));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8("../../../Desktop/UI.Zip/select_ui/manual.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_2->setIcon(icon1);
         pushButton_3 = new QPushButton(centralWidget);
         pushButton_3->setObjectName("pushButton_3");
         pushButton_3->setGeometry(QRect(320, 360, 75, 24));
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8("../../../Desktop/UI.Zip/main_ui/enter.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_3->setIcon(icon2);
         book_photo = new QLabel(centralWidget);
         book_photo->setObjectName("book_photo");
         book_photo->setGeometry(QRect(30, 30, 171, 221));
@@ -66,7 +78,7 @@ public:
         book_name->setFont(font);
         book_name->setStyleSheet(QString::fromUtf8(""));
         book_name->setMidLineWidth(0);
-        book_name->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        book_name->setAlignment(Qt::AlignCenter);
         book_info = new QLabel(centralWidget);
         book_info->setObjectName("book_info");
         book_info->setGeometry(QRect(30, 270, 411, 71));
@@ -91,11 +103,32 @@ public:
         book_author->setFont(font);
         book_author->setStyleSheet(QString::fromUtf8(""));
         book_author->setMidLineWidth(0);
-        book_author->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        book_author->setAlignment(Qt::AlignCenter);
         book_num = new QLabel(centralWidget);
         book_num->setObjectName("book_num");
         book_num->setGeometry(QRect(230, 10, 71, 41));
+        QFont font2;
+        font2.setPointSize(10);
+        book_num->setFont(font2);
+        label = new QLabel(centralWidget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(0, 280, 321, 151));
+        label->setStyleSheet(QString::fromUtf8("background : rgb(255, 252, 233)"));
+        label_2 = new QLabel(centralWidget);
+        label_2->setObjectName("label_2");
+        label_2->setGeometry(QRect(110, -90, 451, 221));
+        label_2->setStyleSheet(QString::fromUtf8("background : rgb(255, 252, 233)"));
         bookinfoClassClass->setCentralWidget(centralWidget);
+        label_2->raise();
+        label->raise();
+        pushButton->raise();
+        pushButton_2->raise();
+        pushButton_3->raise();
+        book_photo->raise();
+        book_name->raise();
+        book_info->raise();
+        book_author->raise();
+        book_num->raise();
         menuBar = new QMenuBar(bookinfoClassClass);
         menuBar->setObjectName("menuBar");
         menuBar->setGeometry(QRect(0, 0, 475, 22));
@@ -125,6 +158,8 @@ public:
         book_info->setText(QString());
         book_author->setText(QString());
         book_num->setText(QString());
+        label->setText(QString());
+        label_2->setText(QString());
     } // retranslateUi
 
 };

@@ -38,14 +38,17 @@ int CsvLogin(string acc, string pwd) {
 
             comparebuffer = bufferout[passwordline];
             if (comparebuffer.compare(passwordnamevelue) == 0) {
+                myfile.close();
                 return 0;
             }
             else {
 
             }
+            myfile.close();
             return 1;
         }
 
     }
+    myfile.close();
     return 1;
 }

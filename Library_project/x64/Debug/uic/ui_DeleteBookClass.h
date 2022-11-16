@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
@@ -26,6 +27,7 @@ class Ui_DeleteBookClassClass
 public:
     QWidget *centralWidget;
     QTableWidget *tableWidget;
+    QLabel *label;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -48,7 +50,14 @@ public:
         tableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem2);
         tableWidget->setObjectName("tableWidget");
         tableWidget->setGeometry(QRect(60, 70, 351, 451));
+        label = new QLabel(centralWidget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(0, -130, 491, 311));
+        label->setPixmap(QPixmap(QString::fromUtf8("../../../Desktop/UI.Zip/administratorselect_ui/library3.png")));
+        label->setScaledContents(true);
         DeleteBookClassClass->setCentralWidget(centralWidget);
+        label->raise();
+        tableWidget->raise();
         menuBar = new QMenuBar(DeleteBookClassClass);
         menuBar->setObjectName("menuBar");
         menuBar->setGeometry(QRect(0, 0, 475, 22));
@@ -75,6 +84,7 @@ public:
         ___qtablewidgetitem1->setText(QCoreApplication::translate("DeleteBookClassClass", "\354\240\234\353\252\251", nullptr));
         QTableWidgetItem *___qtablewidgetitem2 = tableWidget->horizontalHeaderItem(2);
         ___qtablewidgetitem2->setText(QCoreApplication::translate("DeleteBookClassClass", "\354\266\234\355\214\220\354\202\254", nullptr));
+        label->setText(QString());
     } // retranslateUi
 
 };

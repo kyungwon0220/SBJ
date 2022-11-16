@@ -4,6 +4,7 @@
 using namespace std;
 
 extern int rowValue;
+
 borrowClass::borrowClass(QWidget *parent)
 	: QMainWindow(parent)
 {

@@ -19,9 +19,11 @@ public:
 	returnBookClass(QWidget *parent = nullptr);
 	~returnBookClass();
 	int BookReturn(string RequesterVelue, string BookNVelue);
+	void init();
 
 private:
 	Ui::returnBookClassClass ui;
 public slots:
 	void return_book();
+	void return_bookk();
 };

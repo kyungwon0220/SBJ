@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -28,6 +29,11 @@ public:
     QPushButton *pushButton;
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
+    QLabel *label;
+    QLabel *label_2;
+    QLabel *label_3;
+    QLabel *label_4;
+    QLabel *label_5;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -63,7 +69,37 @@ public:
         icon2.addFile(QString::fromUtf8("../../../Desktop/UI.Zip/select_ui/manual.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_3->setIcon(icon2);
         pushButton_3->setIconSize(QSize(40, 40));
+        label = new QLabel(centralWidget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(-210, 370, 501, 311));
+        label->setPixmap(QPixmap(QString::fromUtf8("../../../Desktop/UI.Zip/administratorselect_ui/library2.jpg")));
+        label->setScaledContents(true);
+        label_2 = new QLabel(centralWidget);
+        label_2->setObjectName("label_2");
+        label_2->setGeometry(QRect(210, -70, 501, 261));
+        label_2->setPixmap(QPixmap(QString::fromUtf8("../../../Desktop/UI.Zip/administratorselect_ui/library3.png")));
+        label_2->setScaledContents(true);
+        label_3 = new QLabel(centralWidget);
+        label_3->setObjectName("label_3");
+        label_3->setGeometry(QRect(287, 370, 211, 221));
+        label_3->setStyleSheet(QString::fromUtf8("background : rgb(255, 253, 248)"));
+        label_4 = new QLabel(centralWidget);
+        label_4->setObjectName("label_4");
+        label_4->setGeometry(QRect(0, -30, 211, 221));
+        label_4->setStyleSheet(QString::fromUtf8("background : rgb(255, 253, 248)"));
+        label_5 = new QLabel(centralWidget);
+        label_5->setObjectName("label_5");
+        label_5->setGeometry(QRect(-10, 190, 501, 181));
+        label_5->setStyleSheet(QString::fromUtf8("background : rgb(255, 255, 255)"));
         administratorClassClass->setCentralWidget(centralWidget);
+        label_5->raise();
+        pushButton->raise();
+        pushButton_2->raise();
+        pushButton_3->raise();
+        label->raise();
+        label_2->raise();
+        label_3->raise();
+        label_4->raise();
         menuBar = new QMenuBar(administratorClassClass);
         menuBar->setObjectName("menuBar");
         menuBar->setGeometry(QRect(0, 0, 475, 22));
@@ -88,6 +124,11 @@ public:
         pushButton->setText(QCoreApplication::translate("administratorClassClass", "\354\266\224\352\260\200", nullptr));
         pushButton_2->setText(QCoreApplication::translate("administratorClassClass", "\354\202\255\354\240\234", nullptr));
         pushButton_3->setText(QCoreApplication::translate("administratorClassClass", "\355\232\214\354\233\220\352\264\200\353\246\254", nullptr));
+        label->setText(QString());
+        label_2->setText(QString());
+        label_3->setText(QString());
+        label_4->setText(QString());
+        label_5->setText(QString());
     } // retranslateUi
 
 };
